@@ -80,5 +80,10 @@ public class CrudController {
         return ma;
     }
 
+    /* 测试更新项目*/
+    public void test(){
+        System.out.println("测试成功!");
+    }
+
 
 }
