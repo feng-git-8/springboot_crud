@@ -1,0 +1,37 @@
+
+server:
+  port: 8083
+spring:
+  #freemarker
+  freemarker:
+    allowRequestOverride: false
+    allowSessionOverride: false
+    cache: true
+    checkTemplateLocation: true
+    contentType: text/html
+    exposeRequestAttributes: false
+    exposeSessionAttributes: false
+    exposeSpringMacroHelpers: false
+    suffix: .ftl
+    templateEncoding: UTF-8
+    templateLoaderPath: classpath:/templates/  #表示所有的模板文件都放在该目录下
+    spring.freemarker.settings:
+      locale: zh_CN
+      date_format: yyyy-MM-dd
+  #数据库
+  datasource:
+    url: jdbc:mysql://localhost:3306/19projectsty?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+#  #rabbitmq
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#    virtual-host: /testmq
+#    listener:
+#      simple:
+#        #acknowledge-mode: manual #设置确认模式手工确认
+#        concurrency: 3 #消费者最小数量
+#        max-concurrency: 10 # 消费者最大数量
